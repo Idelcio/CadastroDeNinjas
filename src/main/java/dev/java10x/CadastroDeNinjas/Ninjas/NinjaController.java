@@ -9,6 +9,8 @@ import java.util.List;
 @RequestMapping("/ninjas")
 public class NinjaController {
 
+
+
     private NinjaService ninjaService;
 
     @Autowired
@@ -25,7 +27,7 @@ public class NinjaController {
 
     // adicionar ninjas (CREATE)
     @PostMapping("/criar")
-    public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+    public NinjaDTO criarNinja(@RequestBody NinjaDTO ninja){
         return ninjaService.criarNinja(ninja);
     }
 
